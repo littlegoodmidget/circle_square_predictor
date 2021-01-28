@@ -86,6 +86,11 @@ canvas.addEventListener('mousemove', function(e) {
     mouseMoveCounter++;
     mouse.x = e.offsetX * (canvas.width / 600);
     mouse.y = e.offsetY * (canvas.height / 600);
+    if (mouse.down) {
+        c.beginPath();
+        c.arc(mouse.x, mouse.y, 1, 0, Math.PI * 2);
+        c.fill();
+    }
 })
 
 canvas.addEventListener('mousedown', function(e) {
