@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script src="src/ConvNet.js"></script>
+    <script src="src/Layer.js"></script>
+    <script src="src/NetworkFunctions.js"></script>
+    <script src="src/NNMath.js"></script>
+    
+    
+    <script src="script.js" defer></script>
+    
+    <script src="extra.js" defer></script>
+    
+    <script src="shapeDetection.js" defer></script>
+    <script src="model.js" defer></script>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        canvas {
+            /* transform: rotateY(180deg); */
+            image-rendering: pixelated;
+            border: 1px solid black;
+        }
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+        }
+        canvas {
+            width: 600px;
+            height: 600px;
+            margin: auto auto;
+        }
+
+        #prediction {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            user-select: none;
+        }
+
+
+        #graph {
+            position: absolute;
+            pointer-events: none;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 100;
+        }
+    </style>
+
+    <title>Convolutional Neural Network</title>
+</head>
+<body>
+    <h1 id='prediction'></h1>
+    <canvas id='graph'></canvas>
+</body>
+</html>
